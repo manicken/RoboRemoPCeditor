@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{72CC97E0-7B4E-4731-8F98-49F57EC2B415}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RoboRemoPC</RootNamespace>
+    <AssemblyName>RoboRemoPC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\_CommonSourceFiles\CustomSlider.cs">
+      <Link>CustomSlider.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\_CommonSourceFiles\CustomSlider.Designer.cs">
+      <Link>CustomSlider.Designer.cs</Link>
+      <DependentUpon>CustomSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\_CommonSourceFiles\MicrosanExtensions.cs">
+      <Link>MicrosanExtensions.cs</Link>
+    </Compile>
+    <Compile Include="CustomSlider2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevTestForm.Designer.cs">
+      <DependentUpon>DevTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentLabelOld.cs" />
+    <Compile Include="CustomDraw.cs" />
+    <Compile Include="DebugLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugLogForm.Designer.cs">
+      <DependentUpon>DebugLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Test_Button_Region.cs" />
+    <None Include="Ui_JAVAsrc.cs" />
+    <None Include="UiItem_JAVAsrc.cs" />
+    <Compile Include="UiItem.cs" />
+    <Compile Include="UsingDesignSurfaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsingDesignSurfaceForm.Designer.cs">
+      <DependentUpon>UsingDesignSurfaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VBDataStore.cs" />
+    <None Include="VBWin_JAVAsrc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\_CommonSourceFiles\CustomSlider.resx">
+      <Link>CustomSlider.resx</Link>
+      <DependentUpon>CustomSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugLogForm.resx">
+      <DependentUpon>DebugLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevTestForm.resx">
+      <DependentUpon>DevTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsingDesignSurfaceForm.resx">
+      <DependentUpon>UsingDesignSurfaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slider_thumb.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slider_thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slider_thumb_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slider_thumb_v.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
